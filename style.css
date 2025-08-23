@@ -1,85 +1,41 @@
 body {
-    background-color: rgb(137, 165, 231);
-}
-/* header & nav bar */
-.nav {
-    width: 600px;
-    margin: 0 auto;
-}
-
-header {
-    background-color: rgb(0, 136, 255);
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    
-}
-
-logo-content {
-    text-align: center;
-    margin: 0 auto;
-    
-}
-
-header h1 {
-    font-size: 40px;
-    margin: 1px;
-    margin-bottom: 1px;
-    text-align: center;
-}
-
-.imglogo {
-    height: 100px;
-    border-radius: 100%;
-}
-
-nav {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    padding: 2px;
-}
-
-a {
-    font-size: 15px;
-    color: black;
-    padding: 5px;
-    line-height: 0.5;
-    text-decoration: none;
-    
-}
-a:link{
-    color: black;
-}
-
-a:hover {
+    height: 100vh;
+    margin: 0;
+    background: #111;
     color: white;
-    font-weight: bold;
-}
-a:active{
-    color: gray;
-}
-
-/* About us home */
-
-.about-us-home {
-    font-size: 15px;
-    background-color: rgb(131, 242, 118);
-    width: 500px;
-    height: 100px;
-    margin: 0 auto;
-    padding-left:20px ;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
 
 }
 
-.about-us-home h1 {
-    line-height: 1.5;
+h1 {
+    display: flex;
+    gap: 5px;
+    font-size: 3rem;
+
 }
 
-.about-us-home-contane {
-    font-size: 15px;
-    line-height: 1.2;
-    width: 500px;
-    text-align: center;
-    margin: 0 auto;
+h1 span {
+    display: inline;
+    animation: ripple 1.2s ease-in-out infinite;
+
+}
+
+h1 span:nth-child(1){animation-delay: 0s;}
+h1 span:nth-child(2){animation-delay: 0.1s;}
+h1 span:nth-child(3){animation-delay: 0.2s;}
+h1 span:nth-child(4){animation-delay: 0.3s;}
+h1 span:nth-child(5){animation-delay: 0.5s;}
+h1 span:nth-child(6){animation-delay: 0.6s;}
+h1 span:nth-child(7){animation-delay: 0.7s;}
+h1 span:nth-child(8){animation-delay: 0.8s;}
+h1 span:nth-child(9){animation-delay: 0.9s;}
+h1 span:nth-child(10){animation-delay: 1.1s;}
+h1 span:nth-child(11){animation-delay: 1.2s;}
+h1 span:nth-child(12){animation-delay: 1.3s;}
+@keyframes ripple {
+0%, 100% {transform: translateY(0)scale(1);color: white;}
+50% {transform: translateY(-15px)scale(1.2);color: #00f7ff;}
 }
