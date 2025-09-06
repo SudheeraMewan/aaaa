@@ -1,23 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IS Fish Farm</title>
-    <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IS Fish Farm</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #333;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      
+    }
+
+    .menu-toggle div {
+      width: 20px;
+      height: 2px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.3s;
+      
+    }
+
+    /* Responsive */
+    @media (max-width: 400px) {
+      nav ul {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background: #333;
+        flex-direction: column;
+        width: 200px;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      nav ul.active {
+        left: 0;
+
+    
+        
+      }
+
+      nav ul li {
+        margin: 15px 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+        
+      }
+    }
+  </style>
 </head>
 <body>
     <header>
-        <img src="img/IS Fish Farm Logo.jpeg" class="logo-img">
-        <h1 class="logo-h1">
-            IS Fish Farm
-        </h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Market Place</a>
-            <a href="#">Oder Now</a>
-            <a href="#">Contect Us</a>
-        </nav>
+        <img src="img/IS Fish Farm Logo.jpeg" alt="Logo IS Fish Farm" class="logo">
+        <h1 class="brand-name">IS Fish Farm</h1>
     </header>
+  <nav>
+    <!-- <div class="logo">
+    
+    </div> -->
+    <!-- <h1>IS Fish Farm</h1> -->
+    <ul id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav> 
+
+  <img src="img/Golden Angelfish.webp" height="75px">
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
